@@ -21,7 +21,7 @@ class AuthRepository {
             await FirebaseFirestore.instance
                 .collection("users")
                 .doc(user.uid)
-                .set({"email": user.email, "name": user.displayName, "profilePic": user.photoURL});
+                .set({"email": user.email, "name": user.displayName, "profilePic": user.photoURL, "userId": user.uid});
           }
         }
       }

@@ -17,17 +17,26 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      cursorColor: Colors.black,
       obscureText: obscure,
       validator: validator,
       autovalidateMode: AutovalidateMode.onUserInteraction,
       controller: controller,
       decoration: InputDecoration(
-        border: const OutlineInputBorder(
+        labelStyle: TextStyle(color: Colors.black),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: Colors.black, width: 1.5),
           borderRadius: BorderRadius.all(
             Radius.circular(12),
           ),
         ),
-        focusColor: Colors.green,
+        border: const OutlineInputBorder(
+          borderSide: BorderSide(color: Colors.black),
+          borderRadius: BorderRadius.all(
+            Radius.circular(12),
+          ),
+        ),
+        focusColor: Colors.black,
         labelText: labletxt,
       ),
     );

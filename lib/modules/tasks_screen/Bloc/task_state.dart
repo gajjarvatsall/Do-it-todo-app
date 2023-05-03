@@ -5,17 +5,39 @@ abstract class TaskState {}
 
 class TaskInitial extends TaskState {}
 
-class GetDataState extends TaskState {
+class GetPendingTasksState extends TaskState {
   bool isLoading;
   bool isCompleted;
   bool hasError;
   List<TaskModel>? taskData;
-  GetDataState({this.isLoading = false, this.isCompleted = false, this.hasError = false, this.taskData});
+  GetPendingTasksState({this.isLoading = false, this.isCompleted = false, this.hasError = false, this.taskData});
 }
 
-class SetDataState extends TaskState {
+class GetCompletedTasksState extends TaskState {
   bool isLoading;
   bool isCompleted;
   bool hasError;
-  SetDataState({this.isLoading = false, this.isCompleted = false, this.hasError = false});
+  List<TaskModel>? taskData;
+  GetCompletedTasksState({this.isLoading = false, this.isCompleted = false, this.hasError = false, this.taskData});
+}
+
+class CreateTasksState extends TaskState {
+  bool isLoading;
+  bool isCompleted;
+  bool hasError;
+  CreateTasksState({this.isLoading = false, this.isCompleted = false, this.hasError = false});
+}
+
+class UpdateTasksState extends TaskState {
+  bool isLoading;
+  bool isCompleted;
+  bool hasError;
+  UpdateTasksState({this.isLoading = false, this.isCompleted = false, this.hasError = false});
+}
+
+class DeleteTasksState extends TaskState {
+  bool isLoading;
+  bool isCompleted;
+  bool hasError;
+  DeleteTasksState({this.isLoading = false, this.isCompleted = false, this.hasError = false});
 }

@@ -42,12 +42,22 @@ dependencies:
   flutter_bloc: ^8.1.2
   flutter_svg: ^2.0.5
   font_awesome_flutter: ^10.4.0
-  flutter_launcher_icons: ^0.13.1
   flutter_slidable: ^3.0.0
+  flutter_launcher_icons: ^0.13.1
+  widget_circular_animator: ^1.0.0
+  curved_navigation_bar: ^1.0.3
+  google_nav_bar: ^5.0.6
+  flutter_staggered_animations: ^1.1.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+flutter_icons:
+  android: true
+  ios: true
+
+  image_path: "assets/images/logo.png"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

@@ -48,6 +48,7 @@ class _MyAppState extends State<MyApp> {
         ],
         child: MaterialApp(
           theme: ThemeData(
+            primaryColor: Colors.black,
             useMaterial3: true,
             fontFamily: 'Sequel',
             scaffoldBackgroundColor: Colors.white,

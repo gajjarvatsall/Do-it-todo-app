@@ -3,14 +3,31 @@ part of 'task_bloc.dart';
 @immutable
 abstract class TaskEvent {}
 
-class getDataEvent extends TaskEvent {
+class GetPendingTasksEvent extends TaskEvent {
   final String currentUserId;
-  getDataEvent(this.currentUserId);
+  GetPendingTasksEvent(this.currentUserId);
 }
 
-class setDataEvent extends TaskEvent {
+class GetCompletedTasksEvent extends TaskEvent {
+  final String currentUserId;
+  GetCompletedTasksEvent(this.currentUserId);
+}
+
+class CreateTasksEvent extends TaskEvent {
   final String task;
   final String userId;
   final bool isCompleted;
-  setDataEvent(this.task, this.isCompleted, this.userId);
+  CreateTasksEvent(this.task, this.isCompleted, this.userId);
+}
+
+class UpdateTasksEvent extends TaskEvent {
+  final String task;
+  final String id;
+  final bool isCompleted;
+  UpdateTasksEvent(this.task, this.isCompleted, this.id);
+}
+
+class DeleteTasksEvent extends TaskEvent {
+  final String id;
+  DeleteTasksEvent(this.id);
 }
